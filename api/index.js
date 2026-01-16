@@ -32,7 +32,7 @@ const connectOnce = async () => {
 // Change
 
 // const PORT = 8000;
-connectDb()
+connectOnce();
 // .then(()=>{
 //     app.listen(PORT, ()=>{
 //         console.log(`server run at port ${PORT}`)
