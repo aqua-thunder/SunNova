@@ -31,7 +31,7 @@ connectDb();
 // Change
 
 // const PORT = 8000;
-// connectOnce();
+// conntectDb();
 // .then(()=>{
 //     app.listen(PORT, ()=>{
 //         console.log(`server run at port ${PORT}`)
