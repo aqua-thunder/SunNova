@@ -37,3 +37,5 @@ connectDb();
 //         console.log(`server run at port ${PORT}`)
 //     })
 // })
+
+module.exports = app;
