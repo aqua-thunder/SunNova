@@ -8,7 +8,7 @@ const adminRoute = require("./router/admin-router.js")
 const serviceRoute = require("./router/service-router.js")
 
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://sun-nova-asn1.vercel.app",
     methods: "GET, POST , PUT , DELETE, PATCH, HEAD",
     credentials: true
 }

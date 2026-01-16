@@ -3,6 +3,9 @@ import React from "react";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+
+    const API_URL = import.meta.env.VITE_API_URL;
+
     const [token, setToken] = useState(localStorage.getItem('token'))
     const [user, setUser] = useState('')
     const [isLoading, setIsLoading] = useState(true)
@@ -29,7 +32,7 @@ export const AuthProvider = ({ children }) => {
     const userAuthentication = async () => {
         try {
             setIsLoading(true)
-            const response = await fetch("http://localhost:8000/api/auth/user", {
+            const response = await fetch(`${API_URL}/auth/user`, {
                 method: "GET",
                 headers: {
                     Authorization: authorizationToken
@@ -52,7 +55,7 @@ export const AuthProvider = ({ children }) => {
     // To fetch the services data fromt the databse
     const getServices = async () => {
         try {
-            const response = await fetch("http://localhost:8000/api/data/service", {
+            const response = await fetch(`${API_URL}/data/service`, {
                 method: "GET",
             });
             if (response.ok) {
