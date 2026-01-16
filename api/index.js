@@ -19,6 +19,12 @@ app.use("/api/auth", authRoute)
 app.use("/api/admin", adminRoute)
 app.use("/api/data", serviceRoute)
 
+app.get("/test", (req, res) => {
+  res.status(200).json({
+    message: "✅ Backend is live and working on Vercel!"
+  });
+});
+
 
 // change
 let isConnected = false;
