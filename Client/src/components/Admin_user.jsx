@@ -8,7 +8,7 @@ const Admin_users = () => {
   const { authorizationToken } = useAuth();
   const getAllUserData = async (req, res) => {
     try {
-      const response = await fetch(`${API_URL}/admin/users`, {
+      const response = await fetch(`${API_URL}/api/admin/users`, {
         method: "GET",
         headers: {
           Authorization: authorizationToken
@@ -23,7 +23,7 @@ const Admin_users = () => {
 
   const deleteUser = async (id) => {
     try {
-      const response = await fetch(`${API_URL}/admin/users/delete/${id}`, {
+      const response = await fetch(`${API_URL}/api/admin/users/delete/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: authorizationToken
