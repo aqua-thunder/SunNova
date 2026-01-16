@@ -27,18 +27,11 @@ app.get("/api/test", (req, res) => {
 
 
 // change
-let isConnected = false;
-
-const connectOnce = async () => {
-  if (!isConnected) {
-    await connectDb();
-    isConnected = true;
-  }
-};
+connectDb();
 // Change
 
 // const PORT = 8000;
-connectOnce();
+// connectOnce();
 // .then(()=>{
 //     app.listen(PORT, ()=>{
 //         console.log(`server run at port ${PORT}`)
