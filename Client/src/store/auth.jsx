@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
     const userAuthentication = async () => {
         try {
             setIsLoading(true)
-            const response = await fetch(`${API_URL}/auth/user`, {
+            const response = await fetch(`${API_URL}/api/auth/user`, {
                 method: "GET",
                 headers: {
                     Authorization: authorizationToken
@@ -55,7 +55,7 @@ export const AuthProvider = ({ children }) => {
     // To fetch the services data fromt the databse
     const getServices = async () => {
         try {
-            const response = await fetch(`${API_URL}/data/service`, {
+            const response = await fetch(`${API_URL}/api/data/service`, {
                 method: "GET",
             });
             if (response.ok) {
